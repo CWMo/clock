@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Clock</title>
+</head>
+
+<body>
+    <section id="clock">
+        <div id="hour" class="hand"></div>
+        <div id="min" class="hand"></div>
+        <div id="sec" class="hand"></div>
+    </section>
+    <script>
+        const hour = document.getElementById("hour");
+        const min = document.getElementById("min");
+        const sec = document.getElementById("sec");
+
+        function showTime() {
+            const now = new Date();
+
+            const s = now.getSeconds();
+            const m = now.getMinutes();
+            const h = now.getHours();
+
+            sec.style.transform = `rotate(${90 + 6 * s}deg)`;
+            min.style.transform = `rotate(${90 + 6 * m + 0.1 * s}deg)`;
+            hour.style.transform = `rotate(${90 + 30 * h + 0.5 * m}deg)`;
+        }
+
+        setInterval(showTime, 1000);
+
+    </script>
+</body>
+
+</html>
