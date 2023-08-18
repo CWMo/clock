@@ -136,47 +136,61 @@ table {
 
 /*---- my css starts here ----*/
 body {
-    display: flex;
-    height: 90vh;
-  }
-  
-  #clock {
-    margin: auto;
-    width: 300px;
-    height: 300px;
-    position: relative;
-    background-color: blue;
-    border-radius: 50%;
-  }
-  
-  .hand {
-    position: absolute;
-  }
-  
-  #hour {
-    height: 5px;
-    width: 30%;
-    background-color: red;
-    top: calc(50% - 2px);
-    left: 20%;
-    transform-origin: right;
-  }
-  
-  #min {
-    height: 3px;
-    width: 40%;
-    background-color: pink;
-    top: calc(50% - 1px);
-    left: 10%;
-    transform-origin: right;
-  }
-  
-  #sec {
-    height: 1px;
-    width: 55%;
-    background-color: white;
-    top: 50%;
-    left: 6%; 
-    transform-origin: 80%;
-  }
-  
+  display: flex;
+  height: 90vh;
+}
+
+#clock {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.hand {
+  position: absolute;
+}
+
+#hour {
+  height: 5px;
+  width: 30%;
+  background-color: red;
+  top: calc(50% - 2px);
+  left: 20%;
+  transform-origin: right;
+}
+
+#min {
+  height: 3px;
+  width: 40%;
+  background-color: pink;
+  top: calc(50% - 1px);
+  left: 10%;
+  transform-origin: right;
+}
+
+#sec {
+  height: 1px;
+  width: 55%;
+  background-color: white;
+  top: 50%;
+  left: 6%;
+  transform-origin: 80%;
+}
+
+.graduation {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: rotate(calc(var(--min) * 6deg + 90deg));
+}
+
+.graduation div {
+  width: 3%;
+  height: 1px;
+  position: relative;
+  left: 3%;
+  background-color: white;
+}
