@@ -142,8 +142,10 @@ body {
 
 #clock {
   margin: auto;
-  width: 300px;
-  height: 300px;
+  width: 100%;  /* width is same as container by default */
+  min-width: 100px; /* but cannot smaller than 100px */
+  max-width: 100vh; /* and is not too big that exceed the height of viewport */
+  aspect-ratio: 1/1; /* height of the clock should be same as width */
   position: relative;
   background-color: blue;
   border-radius: 50%;
